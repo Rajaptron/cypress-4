@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "cypress": "cypress open",
-    "test": "cypress run"
+    "test": "cypress run",
+    "merge": "mochawesome-merge cypress/report/mochawesome-report/*.json > mochawesome.json",
+    "merge_html": "marge mochawesome.json",
+    "runreport": "npm test && npm run merge && npm run merge_html"
   },
   "keywords": [],
   "author": "",

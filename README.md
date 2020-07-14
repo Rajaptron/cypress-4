@@ -27,3 +27,9 @@
                     "timestamp": "mmddyyyy_HHMMss"
                 }
             }
+
+# To merge the json 
+npx mochawesome-merge "cypress/report/mochawesome-report/*.json" > mochawesome.json
+
+# generate combined html report
+npx marge mochawesome.json
